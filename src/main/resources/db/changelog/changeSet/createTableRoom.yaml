@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: createTableRoom
+      author: Chibix
+      changes:
+        - createTable:
+            tableName: room
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+              - column:
+                  name: square
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar(100)
